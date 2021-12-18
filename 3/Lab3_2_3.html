@@ -1,0 +1,44 @@
+<html>
+<head>
+    <title>Lab 3_2</title>
+</head>
+<script> 
+    let arr = [];
+    let n = +prompt('Введите n: '); 
+    if (n>10) {
+    for (let i = 0; i < n; i++) {
+        let element = Math.floor(Math.random() * (10 - (-10) + 1) ) + (-10); 
+        arr.push(element);
+    }
+
+    alert(arr); 
+
+    let neg = 0;
+    let sum_neg_el = 0;
+    let pos = 0;
+    let sum_pos_el = 0; 
+    let zeros = 0;
+
+    for (let i = 0; i < n; i++) {
+        let element = arr[i]
+        if (element < 0) {
+            arr[i] = element * element; 
+            neg++;
+            sum_neg_el += element; 
+        } else if (element > 0) {
+            pos++;
+            sum_pos_el += element; 
+        } else {
+            zeros++; 
+        }
+    }
+
+    alert('Среднее арифметическое положительных: ' + (sum_pos_el / pos))
+    alert('Среднее арифметическое отрицательных: ' + (sum_neg_el / neg))
+    alert('Количество нулей: ' + zeros)
+    alert(arr); 
+}
+else
+alert('Неправильное n')
+</script>
+</html>

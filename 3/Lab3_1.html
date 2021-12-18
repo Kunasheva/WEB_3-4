@@ -1,0 +1,22 @@
+<html>
+<head>
+    <title>Lab 3_1</title>
+</head>
+<script>
+    let arr = []; 
+    let sum = 0; 
+    let c = 0;
+    for (let i = 0; i < 16; i++) { 
+        arr.push(Math.floor(Math.random() * (30 - (-10) + 1) ) + (-10));
+    }
+    alert("Массив: " + arr)
+    for (element of arr)
+    {
+    	if (element>0){
+    		sum+=element
+    		c++
+    	}
+    }
+    alert("Среднее положительных: " + sum/c) 
+</script>
+</html>
