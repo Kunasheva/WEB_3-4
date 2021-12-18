@@ -1,0 +1,75 @@
+<html>
+<head>
+	<title>Lab 4_3</title>
+</head>
+<script type="text/javascript">
+
+let cust1 = {
+	name: "Ochir",
+	age: 17,
+	money: 120
+}
+
+let cust2 = {
+	name: "Ilana",
+	age: 19,
+	money: 1200
+}
+
+let rest1 = {
+	city:"Moscow",
+	name: "Shaurma",
+	adr: "Lenina 5",
+	sellalko: "True"
+}
+
+let rest2 = {
+	city: "Moscow",
+	name: "TheBull",
+	adr: "Pushkina 6",
+	sellalko: "False"
+}
+
+let order1 ={
+	name: "wine",
+	alko: "yes",
+	price: 130
+}
+
+let order2= {
+	name: "salad",
+	alko: "no",
+	prive: "40"
+
+}
+
+
+order1.chek = function() {
+	if (this.alko =="yes"){
+		if (cust1.age < 18) {
+				alert(cust1.name + ', ' +"Невозможно выполнить заказ, вы слишком малы для такого")
+			}
+		}
+	else if (cust1.money < this.price){
+		alert(cust1.name + ', ' +"Невозможно выполнить заказ, у вас же не хватит денег.")
+		}
+	else alert(cust1.name + ', ' +"Заказ принят")
+	}
+
+
+order2.chek = function() {
+	if (this.alko =="yes"){
+		if (cust2.age < 18) {
+				alert(cust2.name + ', ' +"Невозможно выполнить заказ, вы слишком малы для такого")
+			}
+		}
+	else if (cust2.money < this.price){
+		alert(cust2.name + ', ' +"Невозможно выполнить заказ, у вас же не хватит денег.")
+		}
+	else alert(cust2.name + ', ' +"Заказ принят")
+	}
+
+order1.chek()
+order2.chek()
+</script>
+</html>
